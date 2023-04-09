@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     AppTheme.init(context: context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'bPay',
       theme: AppTheme.getLightTheme,
       home: const LoginScreen(),

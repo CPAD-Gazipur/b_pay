@@ -69,7 +69,7 @@ class AppTheme {
         ),
         headline6: GoogleFonts.poppins(
           color: Theme.of(_context!).unselectedWidgetColor,
-          fontSize: 10,
+          fontSize: 11,
           fontWeight: FontWeight.w500,
         ),
         bodyText1: GoogleFonts.poppins(

@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class CustomInputField extends StatelessWidget {
   final String title, hintText;
   final IconData icon;
+  final TextEditingController controller;
 
   const CustomInputField({
     Key? key,
     required this.title,
     required this.hintText,
     required this.icon,
+    required this.controller,
   }) : super(key: key);
 
   @override
@@ -24,6 +26,7 @@ class CustomInputField extends StatelessWidget {
         Container(
           color: Colors.grey.shade50,
           child: TextField(
+            controller: controller,
             scrollPadding: EdgeInsets.zero,
             keyboardType: TextInputType.number,
             decoration: InputDecoration(

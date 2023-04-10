@@ -2,6 +2,8 @@ import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/view/home/home_screen.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:provider/provider.dart';
 
 class AddMeterTabScreen extends StatelessWidget {
   final TabController tabController;
@@ -15,94 +17,172 @@ class AddMeterTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 10,
-      ),
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const CustomTitleSubTitle(
-                  title: 'Add Meter',
-                  subTitle: 'Please add your meter number',
-                ),
-                const SizedBox(height: 20),
-                Container(
-                  height: 42,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: 42,
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Add Meter',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline5
-                                  ?.copyWith(
-                                    color: Colors.white,
+    TextEditingController meterController = TextEditingController();
+    return SingleChildScrollView(
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 10,
+        ),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Consumer<LoginProvider>(
+                    builder: (context, state, child) {
+                      return state.isQrCode
+                          ? Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Scanning Ongoing...',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline5
+                                      ?.copyWith(color: Colors.black54),
+                                ),
+                                const SizedBox(height: 10),
+                                Center(
+                                  child: Container(
+                                    height: 200,
+                                    width: 200,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                    padding: const EdgeInsets.all(10),
+                                    child: MobileScanner(
+                                      onDetect: (capture) {
+                                        final List<Barcode> barcodes =
+                                            capture.barcodes;
+                                        for (final barcode in barcodes) {
+                                          meterController.text =
+                                              barcode.rawValue!;
+                                        }
+                                      },
+                                    ),
                                   ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 42,
-                          decoration: BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'QR Code',
-                              style: Theme.of(context).textTheme.headline5,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                                ),
+                                const SizedBox(height: 10),
+                              ],
+                            )
+                          : const SizedBox();
+                    },
                   ),
-                ),
-                const SizedBox(height: 20),
-                const CustomInputField(
-                  title: 'Your Meter Number',
-                  hintText: '1234567890',
-                  icon: Icons.electric_meter_outlined,
-                ),
-                const SizedBox(height: 20),
-                CustomButton(
-                  title: 'Add',
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
-                      ),
-                    );
-                  },
-                ),
-              ],
+                  const CustomTitleSubTitle(
+                    title: 'Add Meter',
+                    subTitle: 'Please add your meter number',
+                  ),
+                  const SizedBox(height: 20),
+                  Consumer<LoginProvider>(
+                    builder: (context, state, child) {
+                      return Container(
+                        height: 42,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: InkWell(
+                                onTap: () {
+                                  state.changeMeterScreen(false);
+                                },
+                                child: Container(
+                                  height: 42,
+                                  decoration: BoxDecoration(
+                                    color: state.isQrCode
+                                        ? Colors.transparent
+                                        : Theme.of(context).primaryColor,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Add Meter',
+                                      style: state.isQrCode
+                                          ? Theme.of(context)
+                                              .textTheme
+                                              .headline5
+                                          : Theme.of(context)
+                                              .textTheme
+                                              .headline5
+                                              ?.copyWith(
+                                                color: Colors.white,
+                                              ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: InkWell(
+                                onTap: () {
+                                  state.changeMeterScreen(true);
+                                },
+                                child: Container(
+                                  height: 42,
+                                  decoration: BoxDecoration(
+                                    color: state.isQrCode
+                                        ? Theme.of(context).primaryColor
+                                        : Colors.transparent,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'QR Code',
+                                      style: state.isQrCode
+                                          ? Theme.of(context)
+                                              .textTheme
+                                              .headline5
+                                              ?.copyWith(
+                                                color: Colors.white,
+                                              )
+                                          : Theme.of(context)
+                                              .textTheme
+                                              .headline5,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 20),
+                  CustomInputField(
+                    controller: meterController,
+                    title: 'Your Meter Number',
+                    hintText: '1234567890',
+                    icon: Icons.electric_meter_outlined,
+                  ),
+                  const SizedBox(height: 20),
+                  CustomButton(
+                    title: 'Add',
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const HomeScreen(),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

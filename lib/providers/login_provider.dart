@@ -17,4 +17,13 @@ class LoginProvider extends ChangeNotifier {
     _selected = newItem;
     notifyListeners();
   }
+
+  bool _isQRCodeSelected = false;
+
+  bool get isQrCode => _isQRCodeSelected;
+
+  void changeMeterScreen(bool isQRCode) {
+    _isQRCodeSelected = isQRCode;
+    notifyListeners();
+  }
 }

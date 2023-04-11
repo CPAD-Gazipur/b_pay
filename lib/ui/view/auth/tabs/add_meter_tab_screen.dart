@@ -1,5 +1,5 @@
 import 'package:b_pay/providers/providers.dart';
-import 'package:b_pay/ui/view/home/home_screen.dart';
+import 'package:b_pay/ui/view/home_nav/home_nav_screen.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
@@ -173,7 +173,7 @@ class AddMeterTabScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const HomeNavScreen(),
                         ),
                       );
                     },

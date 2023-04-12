@@ -171,10 +171,11 @@ class AddMeterTabScreen extends StatelessWidget {
                   CustomButton(
                     title: 'Add',
                     onPressed: () {
-                      Navigator.of(context).push(
+                      Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
                           builder: (context) => const HomeNavScreen(),
                         ),
+                        (Route<dynamic> route) => false,
                       );
                     },
                   ),

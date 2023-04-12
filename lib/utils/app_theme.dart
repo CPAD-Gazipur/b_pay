@@ -15,6 +15,8 @@ class AppTheme {
         backgroundColor: Colors.white,
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
         selectedIconTheme: const IconThemeData(
           size: 18,
         ),
@@ -41,7 +43,6 @@ class AppTheme {
               borderRadius: BorderRadius.circular(4),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
         ),
       ),
       inputDecorationTheme: const InputDecorationTheme(

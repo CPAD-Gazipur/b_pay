@@ -23,9 +23,17 @@ class LoginScreen extends StatelessWidget {
       child: Builder(
         builder: (context) {
           final TabController tabController = DefaultTabController.of(context)!;
+          if (provider.changeTab) {
+            tabController.animateTo(2);
+          }
           return WillPopScope(
             onWillPop: () {
-              if (tabController.index == 2) {
+              if (provider.changeTab) {
+                provider.changeTabScreen(false);
+                return Future(() => true);
+              } else if (tabController.index == 0) {
+                return showExitPopup(context);
+              } else if (tabController.index == 2) {
                 tabController.animateTo(1);
                 context.read<LoginProvider>().changeTabIndex(2);
                 return Future(() => false);

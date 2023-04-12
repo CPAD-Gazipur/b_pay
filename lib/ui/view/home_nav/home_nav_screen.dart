@@ -23,9 +23,9 @@ class HomeNavScreen extends StatelessWidget {
             child: Container(
               clipBehavior: Clip.antiAlias,
               height: 58,
-              decoration: const BoxDecoration(
-                color: Color(0xFF27803F),
-                borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
                 ),
@@ -37,19 +37,8 @@ class HomeNavScreen extends StatelessWidget {
                     onTap: state.onTap,
                     backgroundColor: Colors.transparent,
                     type: BottomNavigationBarType.fixed,
-                    iconSize: 18,
                     selectedFontSize: 12,
                     unselectedFontSize: 12,
-                    selectedLabelStyle: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    unselectedLabelStyle: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    selectedItemColor: Colors.white,
-                    unselectedItemColor: Colors.white54,
                     items: const [
                       BottomNavigationBarItem(
                         icon: FaIcon(FontAwesomeIcons.house),

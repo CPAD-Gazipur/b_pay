@@ -1,4 +1,5 @@
-import 'package:badges/badges.dart';
+import 'package:b_pay/data/meter_list.dart';
+import 'package:b_pay/ui/view/views.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,50 +15,33 @@ class HomeScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Good Morning',
-                      style: Theme.of(context).textTheme.headline5?.copyWith(
-                            fontSize: 18,
-                          ),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      'Md. Al-Amin',
-                      style: Theme.of(context).textTheme.headline5,
-                    ),
-                  ],
+            const SizedBox(height: 10),
+            const HomeAppBar(),
+            const SizedBox(height: 20),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: MeterList.meterList.length,
+              itemBuilder: (context, index) {
+                return MeterStatus(
+                  meter: MeterList.meterList[index],
+                );
+              },
+            ),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: double.infinity,
+              height: 40,
+              child: OutlinedButton(
+                onPressed: () {},
+                child: Text(
+                  'Add More Meter',
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                        fontSize: 12,
+                        color: Theme.of(context).primaryColor,
+                      ),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 6,
-                    vertical: 5,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Badge(
-                    position: BadgePosition.topEnd(
-                      top: -6,
-                      end: -6,
-                    ),
-                    badgeStyle: const BadgeStyle(
-                      padding: EdgeInsets.all(3),
-                    ),
-                    child: const Icon(
-                      Icons.notifications,
-                      size: 18,
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
           ],
         ),

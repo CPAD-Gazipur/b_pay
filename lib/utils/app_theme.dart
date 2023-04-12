@@ -14,6 +14,26 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
       ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedIconTheme: const IconThemeData(
+          size: 18,
+        ),
+        unselectedIconTheme: const IconThemeData(
+          size: 18,
+        ),
+        unselectedItemColor: Colors.white54,
+        selectedItemColor: Colors.white,
+        selectedLabelStyle: GoogleFonts.poppins(
+          fontSize: 12,
+          height: 1.6,
+          fontWeight: FontWeight.w400,
+        ),
+        unselectedLabelStyle: GoogleFonts.poppins(
+          fontSize: 12,
+          height: 1.6,
+          fontWeight: FontWeight.w400,
+        ),
+      ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
           shape: MaterialStateProperty.all(
@@ -55,7 +75,7 @@ class AppTheme {
         headline3: GoogleFonts.poppins(
           color: const Color(0xFF111111),
           fontSize: 16,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w600,
         ),
         headline4: GoogleFonts.poppins(
           color: const Color(0xFF111111),

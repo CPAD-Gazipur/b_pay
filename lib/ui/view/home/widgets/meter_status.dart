@@ -1,5 +1,5 @@
 import 'package:b_pay/model/meter_model.dart';
-import 'package:b_pay/ui/widgets/custom_button.dart';
+import 'package:b_pay/ui/view/views.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +56,15 @@ class MeterStatus extends StatelessWidget {
                 child: CustomButton(
                   height: 32,
                   title: 'Recharge',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => PayBillScreen(
+                          meterInfo: meter,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],

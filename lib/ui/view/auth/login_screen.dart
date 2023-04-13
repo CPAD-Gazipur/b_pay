@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
               body: SafeArea(
                 child: Column(
                   children: [
-                    CustomAppBar(
+                    TapBarAppBar(
                       tabController: tabController,
                     ),
                     Expanded(

@@ -34,6 +34,9 @@ class CustomInputField extends StatelessWidget {
               contentPadding: const EdgeInsets.symmetric(
                 vertical: 10,
               ),
+              border: Theme.of(context).inputDecorationTheme.border,
+              focusedBorder:
+                  Theme.of(context).inputDecorationTheme.focusedBorder,
               hintStyle: TextStyle(
                 color: Colors.grey.shade500,
                 fontSize: 14,
@@ -42,6 +45,7 @@ class CustomInputField extends StatelessWidget {
               prefixIcon: Icon(
                 icon,
                 color: Colors.grey.shade400,
+                size: 18,
               ),
             ),
           ),

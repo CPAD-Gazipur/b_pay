@@ -46,14 +46,15 @@ class AppTheme {
         ),
       ),
       inputDecorationTheme: const InputDecorationTheme(
+        isDense: true,
         border: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0xFFC4C4C4),
+            color: Colors.grey,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0x50333333),
+            color: Colors.grey,
           ),
         ),
       ),
@@ -89,9 +90,9 @@ class AppTheme {
           fontWeight: FontWeight.w500,
         ),
         headline6: GoogleFonts.poppins(
-          color: Theme.of(_context!).unselectedWidgetColor,
-          fontSize: 11,
-          fontWeight: FontWeight.w500,
+          color: Colors.grey.shade600,
+          fontSize: 10.5,
+          fontWeight: FontWeight.w400,
         ),
         bodyText1: GoogleFonts.poppins(
           color: Colors.white,

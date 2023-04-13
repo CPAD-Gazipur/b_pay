@@ -2,9 +2,9 @@ import 'package:b_pay/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class CustomAppBar extends StatelessWidget {
+class TapBarAppBar extends StatelessWidget {
   final TabController tabController;
-  const CustomAppBar({
+  const TapBarAppBar({
     Key? key,
     required this.tabController,
   }) : super(key: key);

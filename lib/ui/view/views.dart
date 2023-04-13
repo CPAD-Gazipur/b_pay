@@ -6,3 +6,8 @@ export 'home/home_screen.dart';
 export 'home/widgets/home_app_bar.dart';
 export 'home/widgets/meter_status.dart';
 export 'home_nav/home_nav_screen.dart';
+export 'pay_bill/pay_bill_screen.dart';
+export 'pay_bill/widgets/money_widget.dart';
+export 'receipt/receipt_screen.dart';
+export 'receipt/widget/doted_line.dart';
+export 'receipt/widget/thick_corner.dart';

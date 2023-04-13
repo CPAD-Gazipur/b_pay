@@ -1,5 +1,5 @@
-import 'package:b_pay/data/meter_list.dart';
-import 'package:b_pay/providers/login_provider.dart';
+import 'package:b_pay/data/data.dart';
+import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/view/views.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -25,10 +25,10 @@ class HomeScreen extends StatelessWidget {
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: MeterList.meterList.length,
+              itemCount: MeterData.meterList.length,
               itemBuilder: (context, index) {
                 return MeterStatus(
-                  meter: MeterList.meterList[index],
+                  meter: MeterData.meterList[index],
                 );
               },
             ),

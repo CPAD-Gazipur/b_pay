@@ -26,7 +26,9 @@ class AccountInfoWidget extends StatelessWidget {
             ),
             Text(
               accountNo,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.headline6?.copyWith(
+                    color: Colors.black87,
+                  ),
             ),
           ],
         ),
@@ -39,7 +41,9 @@ class AccountInfoWidget extends StatelessWidget {
             ),
             Text(
               meterNo,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.headline6?.copyWith(
+                    color: Colors.black87,
+                  ),
             ),
           ],
         ),
@@ -52,7 +56,9 @@ class AccountInfoWidget extends StatelessWidget {
             ),
             Text(
               sequenceNo,
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.headline6?.copyWith(
+                    color: Colors.black87,
+                  ),
             ),
           ],
         ),

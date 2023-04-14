@@ -11,3 +11,4 @@ export 'pay_bill/widgets/money_widget.dart';
 export 'receipt/receipt_screen.dart';
 export 'receipt/widget/doted_line.dart';
 export 'receipt/widget/thick_corner.dart';
+export 'usage/usage_screen.dart';

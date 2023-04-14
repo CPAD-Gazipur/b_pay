@@ -40,36 +40,14 @@ class AddZoneTabScreen extends StatelessWidget {
             ),
             const SizedBox(height: 5),
             Consumer<LoginProvider>(builder: (context, state, child) {
-              return Container(
-                color: Colors.grey.shade50,
-                child: DropdownButtonFormField(
-                  borderRadius: BorderRadius.circular(4),
-                  isDense: true,
-                  value: state.selected,
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(
-                      horizontal: 6,
-                    ),
-                    prefixIcon: Icon(
-                      Icons.bolt_rounded,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  items: state.dropDownList.map((value) {
-                    return DropdownMenuItem(
-                      value: value,
-                      child: Text(
-                        value,
-                        style: Theme.of(context).textTheme.headline5,
-                      ),
-                    );
-                  }).toList(),
-                  onChanged: (value) {
-                    if (value != null) {
-                      state.changeSelectedItem(value);
-                    }
-                  },
-                ),
+              return CustomDropDown(
+                value: state.selected,
+                dropDownList: state.dropDownList,
+                onChanged: (value) {
+                  if (value != null) {
+                    state.changeSelectedItem(value);
+                  }
+                },
               );
             }),
             const SizedBox(height: 20),

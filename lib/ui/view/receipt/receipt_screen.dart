@@ -1,6 +1,5 @@
 import 'package:b_pay/model/model.dart';
-import 'package:b_pay/ui/view/receipt/widget/doted_line.dart';
-import 'package:b_pay/ui/view/receipt/widget/thick_corner.dart';
+import 'package:b_pay/ui/view/views.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -74,7 +73,15 @@ class ReceiptScreen extends StatelessWidget {
                                 const SizedBox(height: 20),
                                 CustomButton(
                                   title: 'Download Receipt',
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).pushAndRemoveUntil(
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomeNavScreen(),
+                                      ),
+                                      (Route<dynamic> route) => false,
+                                    );
+                                  },
                                 ),
                               ],
                             ),

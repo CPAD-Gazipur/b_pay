@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
   final String title;
+  final Function()? onPressed;
 
   const AppBarWidget({
     Key? key,
     required this.title,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -13,9 +15,10 @@ class AppBarWidget extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
+          onPressed: onPressed ??
+              () {
+                Navigator.of(context).pop();
+              },
           icon: const Icon(Icons.arrow_back_rounded),
         ),
         Text(

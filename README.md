@@ -2,7 +2,7 @@
 
 Bangladesh digital prepaid meter app ui design using Flutter
 
-<img src="https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study/modules/946300219">
+<img src="screenshots/b_pay_banner.jpeg">
 
 
 ## 🔖 JOIN FLUTTER COURSE (BANGLA) 🔖
@@ -45,7 +45,7 @@ This course is designed for beginner to intermediate developers who want to buil
 
 ## Screenshots:
 
-<img src="https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study/modules/946285769">
+<img src="screenshots/b_pay_screenshots.jpeg">
 
 ### Repository Owner Info
 

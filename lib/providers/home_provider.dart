@@ -1,3 +1,4 @@
+import 'package:b_pay/ui/view/history/history_screen.dart';
 import 'package:b_pay/ui/view/home/home_screen.dart';
 import 'package:b_pay/ui/view/usage/usage_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,7 @@ class HomeProvider extends ChangeNotifier {
   List<Widget> widgets = [
     const HomeScreen(),
     const UsageScreen(),
-    Container(),
+    const HistoryScreen(),
     Container(),
   ];
 }

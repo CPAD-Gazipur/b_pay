@@ -1,6 +1,4 @@
-import 'package:b_pay/ui/view/history/history_screen.dart';
-import 'package:b_pay/ui/view/home/home_screen.dart';
-import 'package:b_pay/ui/view/usage/usage_screen.dart';
+import 'package:b_pay/ui/view/views.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeProvider extends ChangeNotifier {
@@ -17,6 +15,6 @@ class HomeProvider extends ChangeNotifier {
     const HomeScreen(),
     const UsageScreen(),
     const HistoryScreen(),
-    Container(),
+    const ProfileScreen(),
   ];
 }

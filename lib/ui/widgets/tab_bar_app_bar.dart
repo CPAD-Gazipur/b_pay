@@ -1,4 +1,5 @@
 import 'package:b_pay/providers/providers.dart';
+import 'package:b_pay/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -37,34 +38,7 @@ class TapBarAppBar extends StatelessWidget {
                   )
                 ],
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 7,
-                  vertical: 4.5,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(
-                    color: Theme.of(context).primaryColor,
-                    width: 0.5,
-                  ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const CircleAvatar(
-                      radius: 7,
-                      backgroundImage: NetworkImage(
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/1200px-Flag_of_Bangladesh.svg.png'),
-                    ),
-                    const SizedBox(width: 5),
-                    Text(
-                      'বাং',
-                      style: Theme.of(context).textTheme.headline5,
-                    ),
-                  ],
-                ),
-              )
+              const LanguageWidget(),
             ],
           ),
           Consumer<LoginProvider>(builder: (context, state, child) {

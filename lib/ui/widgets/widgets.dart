@@ -6,6 +6,7 @@ export 'custom_drop_down.dart';
 export 'custom_input_field.dart';
 export 'custom_title_subtitle.dart';
 export 'exit_widget.dart';
+export 'language_widget.dart';
 export 'payment_info.dart';
 export 'payment_summary.dart';
 export 'tab_bar_app_bar.dart';

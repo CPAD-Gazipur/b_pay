@@ -5,12 +5,14 @@ class AppBarWidget extends StatelessWidget {
   final String title;
   final Function()? onPressed;
   final bool showDropDown;
+  final bool showLanguage;
 
   const AppBarWidget({
     Key? key,
     required this.title,
     this.onPressed,
     this.showDropDown = false,
+    this.showLanguage = false,
   }) : super(key: key);
 
   @override
@@ -52,6 +54,7 @@ class AppBarWidget extends StatelessWidget {
                 ),
               )
             : const SizedBox(),
+        showLanguage ? const LanguageWidget() : const SizedBox(),
         const SizedBox(width: 16),
       ],
     );

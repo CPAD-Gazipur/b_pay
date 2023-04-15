@@ -10,6 +10,8 @@ export 'home/widgets/meter_status.dart';
 export 'home_nav/home_nav_screen.dart';
 export 'pay_bill/pay_bill_screen.dart';
 export 'pay_bill/widgets/money_widget.dart';
+export 'profile/profile_screen.dart';
+export 'profile/widgets/profile_option.dart';
 export 'receipt/receipt_screen.dart';
 export 'receipt/widget/doted_line.dart';
 export 'receipt/widget/thick_corner.dart';

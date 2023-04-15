@@ -45,7 +45,7 @@ This course is designed for beginner to intermediate developers who want to buil
 
 ## Screenshots:
 
-<img src="screenshots/b_pay_screenshots.jpeg">
+[<img src="screenshots/b_pay_screenshots.jpeg">](https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study)
 
 ### Repository Owner Info
 

@@ -2,15 +2,57 @@
 
 Bangladesh digital prepaid meter app ui design using Flutter
 
-## Getting Started
+<img src="https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study/modules/946300219">
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## 🔖 JOIN FLUTTER COURSE (BANGLA) 🔖
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+_Build real, responsive applications! Learn Basic Dart Programming & start build your own application.
+This course is designed for beginner to intermediate developers who want to build their future with Flutter_
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Checkout Course Now](https://www.youtube.com/playlist?list=PLDitZ-MAvK-4Bt4wRTEidukT4OxRhRTBK)
+
+**Support Me**
+
+- Buy this project on Gumroad [here](https://www.buymeacoffee.com/alaminkarno)
+- Support me via buy me a coffee. [here](https://www.buymeacoffee.com/alaminkarno)
+
+**⚠️ Instruction**
+
+- For the very first, run `flutter pub get` on your favorite IDE
+
+**Packages we are using:**
+
+- google_fonts
+- font_awesome_flutter
+- provider
+- mobile_scanner
+- badges
+- syncfusion_flutter_charts
+
+**UI Design Credit**
+
+- Design with behance by [Multiple Owners](https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study)
+
+**Code Credit**
+
+- Code using Flutter with ❤️ by [Md. Al-Amin](https://github.com/alamin-karno)
+
+## Animation (GIF):
+| Parcel Tracker App (GIF)  |
+|:-------------------------:|
+| <img src="#" width="250"> |
+
+## Screenshots:
+
+<img src="https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study/modules/946285769">
+
+### Repository Owner Info
+
+### Md. Al-Amin
+##### Junior Software Engineer (Android & iOS) at Rokomari.com
+
+__Email :__ [alamin.karno@outlook.com](mailto:alamin.karno@outlook.com) \
+__Github :__ [Md. Al-Amin](https://github.com/alamin-karno) \
+__Facebook :__ [মোঃ আল-আমিন খন্দকার কর্ণ](https://facebook.com/alamin.kanro) \
+__Linkedin :__ [Md. Al-Amin](https://www.linkedin.com/in/alaminkarno/)

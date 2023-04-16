@@ -1,4 +1,3 @@
-export 'chart_model.dart';
 export 'history_model.dart';
 export 'meter_model.dart';
 export 'money_model.dart';

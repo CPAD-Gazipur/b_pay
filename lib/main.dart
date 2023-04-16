@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppTheme.init(context: context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'bPay',

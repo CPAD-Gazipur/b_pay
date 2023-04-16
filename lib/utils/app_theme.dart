@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static BuildContext? _context;
-
-  static void init({required BuildContext context}) {
-    _context = context;
-  }
-
   static ThemeData get getLightTheme {
     return ThemeData(
       primarySwatch: mainAppColor,

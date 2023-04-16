@@ -91,6 +91,5 @@ class ReviewScreen extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

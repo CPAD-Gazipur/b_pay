@@ -1,6 +1,8 @@
 import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
+import 'package:b_pay/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class TapBarAppBar extends StatelessWidget {
@@ -23,20 +25,10 @@ class TapBarAppBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Icon(
-                    Icons.offline_bolt_outlined,
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  const SizedBox(width: 2),
-                  Text(
-                    'PAY',
-                    style: Theme.of(context).textTheme.headline4?.copyWith(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                  )
-                ],
+              SvgPicture.asset(
+                ImageUtils.appLogo,
+                semanticsLabel: 'App Logo',
+                width: 57,
               ),
               const LanguageWidget(),
             ],
@@ -45,7 +37,7 @@ class TapBarAppBar extends StatelessWidget {
             return Text(
               '${state.currentTabIndex}/${tabController.length}',
               style: Theme.of(context).textTheme.headline6?.copyWith(
-                    color: Colors.black87,
+                    color: Colors.grey.shade700,
                   ),
             );
           }),

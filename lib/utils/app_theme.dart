@@ -58,42 +58,42 @@ class AppTheme {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       fontFamily: 'Poppins',
       textTheme: TextTheme(
-        headline1: GoogleFonts.poppins(
+        headline1: GoogleFonts.inter(
           color: const Color(0xFF111111),
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),
-        headline2: GoogleFonts.poppins(
+        headline2: GoogleFonts.inter(
           color: const Color(0xFF111111),
           fontSize: 20,
           fontWeight: FontWeight.w600,
         ),
-        headline3: GoogleFonts.poppins(
+        headline3: GoogleFonts.inter(
           color: const Color(0xFF111111),
           fontSize: 16,
           fontWeight: FontWeight.w600,
         ),
-        headline4: GoogleFonts.poppins(
+        headline4: GoogleFonts.inter(
           color: const Color(0xFF111111),
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
         ),
-        headline5: GoogleFonts.poppins(
+        headline5: GoogleFonts.inter(
           color: const Color(0xFF111111),
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),
-        headline6: GoogleFonts.poppins(
+        headline6: GoogleFonts.inter(
           color: Colors.grey.shade600,
           fontSize: 10.5,
           fontWeight: FontWeight.w400,
         ),
-        bodyText1: GoogleFonts.poppins(
+        bodyText1: GoogleFonts.inter(
           color: Colors.white,
           fontSize: 16,
           fontWeight: FontWeight.w600,
         ),
-        bodyText2: GoogleFonts.poppins(
+        bodyText2: GoogleFonts.inter(
           color: const Color(0xFF111111),
           fontSize: 9,
           fontWeight: FontWeight.bold,
@@ -104,17 +104,17 @@ class AppTheme {
 }
 
 MaterialColor mainAppColor = const MaterialColor(
-  0xFF27803F,
+  0xFF15803D,
   <int, Color>{
-    50: Color(0xFF27803F),
-    100: Color(0xFF27803F),
-    200: Color(0xFF27803F),
-    300: Color(0xFF27803F),
-    400: Color(0xFF27803F),
-    500: Color(0xFF27803F),
-    600: Color(0xFF27803F),
-    700: Color(0xFF27803F),
-    800: Color(0xFF27803F),
-    900: Color(0xFF27803F),
+    50: Color(0xFF15803D),
+    100: Color(0xFF15803D),
+    200: Color(0xFF15803D),
+    300: Color(0xFF15803D),
+    400: Color(0xFF15803D),
+    500: Color(0xFF15803D),
+    600: Color(0xFF15803D),
+    700: Color(0xFF15803D),
+    800: Color(0xFF15803D),
+    900: Color(0xFF15803D),
   },
 );

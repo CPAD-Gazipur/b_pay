@@ -1,5 +1,6 @@
 import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
+import 'package:b_pay/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,7 @@ class AddPhoneTabScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
-                color: Colors.green,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Container(
@@ -36,8 +37,7 @@ class AddPhoneTabScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Image.network(
-                    'https://1.bp.blogspot.com/-w4RpOLGN1i0/XkAeHXK8NdI/AAAAAAAAE0I/7Pk-XolQKj8aqxX_D812i-PMvoPVmnmLACLcBGAsYHQ/w1200-h630-p-k-no-nu/Sheikh_Hasinar_Udyog_gore_gore_Bidyut%25402x.png'),
+                child: Image.asset(ImageUtils.appBanner),
               ),
             ),
             const SizedBox(height: 30),

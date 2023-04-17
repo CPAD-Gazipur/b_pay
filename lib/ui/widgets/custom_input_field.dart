@@ -45,7 +45,7 @@ class CustomInputField extends StatelessWidget {
               prefixIcon: Icon(
                 icon,
                 color: Colors.grey.shade400,
-                size: 18,
+                size: 20,
               ),
             ),
           ),

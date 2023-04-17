@@ -1,7 +1,9 @@
 import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/view/home_nav/home_nav_screen.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
+import 'package:b_pay/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:provider/provider.dart';
 
@@ -49,27 +51,36 @@ class AddMeterTabScreen extends StatelessWidget {
                                       .headline5
                                       ?.copyWith(color: Colors.black54),
                                 ),
-                                const SizedBox(height: 10),
+                                const SizedBox(height: 5),
                                 Center(
-                                  child: Container(
-                                    height: 200,
-                                    width: 200,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Colors.black54,
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      Container(
+                                        height: 210,
+                                        width: 210,
+                                        color: Colors.transparent,
+                                        child: SvgPicture.asset(
+                                          ImageUtils.scannerBG,
+                                          fit: BoxFit.contain,
+                                        ),
                                       ),
-                                    ),
-                                    padding: const EdgeInsets.all(10),
-                                    child: MobileScanner(
-                                      onDetect: (capture) {
-                                        final List<Barcode> barcodes =
-                                            capture.barcodes;
-                                        for (final barcode in barcodes) {
-                                          meterController.text =
-                                              barcode.rawValue!;
-                                        }
-                                      },
-                                    ),
+                                      Container(
+                                        height: 200,
+                                        width: 200,
+                                        padding: const EdgeInsets.all(10),
+                                        child: MobileScanner(
+                                          onDetect: (capture) {
+                                            final List<Barcode> barcodes =
+                                                capture.barcodes;
+                                            for (final barcode in barcodes) {
+                                              meterController.text =
+                                                  barcode.rawValue!;
+                                            }
+                                          },
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 const SizedBox(height: 10),

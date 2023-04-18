@@ -1,9 +1,10 @@
 import 'package:b_pay/data/data.dart';
 import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/widgets/widgets.dart';
+import 'package:b_pay/utils/utils.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class UsageScreen extends StatelessWidget {
@@ -165,10 +166,11 @@ class UsageScreen extends StatelessWidget {
                                   const SizedBox(height: 2),
                                   Row(
                                     children: [
-                                      const FaIcon(
-                                        FontAwesomeIcons.database,
-                                        color: Colors.black87,
-                                        size: 18,
+                                      SvgPicture.asset(
+                                        ImageUtils.icCoinSVG,
+                                        height: 18,
+                                        width: 18,
+                                        color: Colors.grey.shade700,
                                       ),
                                       const SizedBox(width: 5),
                                       Text(
@@ -177,7 +179,7 @@ class UsageScreen extends StatelessWidget {
                                             .textTheme
                                             .headline3
                                             ?.copyWith(
-                                              color: Colors.black87,
+                                              color: Colors.grey.shade700,
                                             ),
                                       ),
                                       const SizedBox(width: 5),
@@ -187,7 +189,7 @@ class UsageScreen extends StatelessWidget {
                                             .textTheme
                                             .headline3
                                             ?.copyWith(
-                                              color: Colors.black87,
+                                              color: Colors.grey.shade700,
                                             ),
                                       ),
                                     ],
@@ -199,16 +201,21 @@ class UsageScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Avg Monthly Bill',
-                                    style:
-                                        Theme.of(context).textTheme.headline6,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        ?.copyWith(
+                                          color: Colors.grey.shade700,
+                                        ),
                                   ),
                                   const SizedBox(height: 2),
                                   Row(
                                     children: [
-                                      const FaIcon(
-                                        FontAwesomeIcons.database,
-                                        color: Colors.black87,
-                                        size: 18,
+                                      SvgPicture.asset(
+                                        ImageUtils.icCoinSVG,
+                                        height: 18,
+                                        width: 18,
+                                        color: Colors.grey.shade700,
                                       ),
                                       const SizedBox(width: 5),
                                       Text(
@@ -217,7 +224,7 @@ class UsageScreen extends StatelessWidget {
                                             .textTheme
                                             .headline3
                                             ?.copyWith(
-                                              color: Colors.black87,
+                                              color: Colors.grey.shade700,
                                             ),
                                       ),
                                       const SizedBox(width: 5),
@@ -227,7 +234,7 @@ class UsageScreen extends StatelessWidget {
                                             .textTheme
                                             .headline3
                                             ?.copyWith(
-                                              color: Colors.black87,
+                                              color: Colors.grey.shade700,
                                             ),
                                       ),
                                     ],
@@ -238,6 +245,7 @@ class UsageScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 10),
                           Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
                                 '10',
@@ -246,11 +254,18 @@ class UsageScreen extends StatelessWidget {
                                     .headline3
                                     ?.copyWith(
                                       fontSize: 24,
+                                      color: Colors.grey.shade800,
                                     ),
                               ),
-                              Text(
-                                'KWh',
-                                style: Theme.of(context).textTheme.headline6,
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  bottom: 5.0,
+                                  left: 2.0,
+                                ),
+                                child: Text(
+                                  'KWh',
+                                  style: Theme.of(context).textTheme.headline6,
+                                ),
                               ),
                             ],
                           ),
@@ -337,25 +352,25 @@ class UsageScreen extends StatelessWidget {
           spots: const [
             FlSpot(0, 0),
             FlSpot(1, 2),
-            FlSpot(2, 0),
+            FlSpot(2, 0.3),
             FlSpot(3, 1),
             FlSpot(3.5, 2),
             FlSpot(4, 3),
             FlSpot(4.5, 1),
             FlSpot(5, 2),
-            FlSpot(6, 0),
+            FlSpot(6, 0.2),
             FlSpot(7, 1),
-            FlSpot(8, 0),
+            FlSpot(8, 0.1),
             FlSpot(9, 3),
-            FlSpot(10, 0),
+            FlSpot(10, 0.1),
             FlSpot(11, 3.44),
           ],
           isCurved: true,
           gradient: LinearGradient(
             colors: [
-              ColorTween(begin: gradientColors[0], end: gradientColors[1])
+              ColorTween(begin: gradientColors[0], end: gradientColors[0])
                   .lerp(0.2)!,
-              ColorTween(begin: gradientColors[0], end: gradientColors[1])
+              ColorTween(begin: gradientColors[1], end: gradientColors[1])
                   .lerp(0.2)!,
             ],
           ),
@@ -367,13 +382,14 @@ class UsageScreen extends StatelessWidget {
           belowBarData: BarAreaData(
             show: true,
             gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
               colors: [
-                ColorTween(begin: gradientColors[0], end: gradientColors[1])
+                ColorTween(begin: gradientColors[0], end: gradientColors[0])
                     .lerp(0.2)!
-                    .withOpacity(0.1),
-                ColorTween(begin: gradientColors[0], end: gradientColors[1])
-                    .lerp(0.2)!
-                    .withOpacity(0.1),
+                    .withOpacity(0.8),
+                ColorTween(begin: gradientColors[1], end: gradientColors[1])
+                    .lerp(0.2)!,
               ],
             ),
           ),
@@ -451,6 +467,6 @@ class UsageScreen extends StatelessWidget {
 }
 
 List<Color> gradientColors = [
-  const Color(0xFFB9F5D3),
   const Color(0xFF2ED067),
+  const Color(0xFFB9F5D3),
 ];

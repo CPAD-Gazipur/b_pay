@@ -1,5 +1,7 @@
+import 'package:b_pay/utils/utils.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({Key? key}) : super(key: key);
@@ -30,24 +32,26 @@ class HomeAppBar extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.symmetric(
-              horizontal: 6,
-              vertical: 5,
+              horizontal: 11,
+              vertical: 10,
             ),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(24),
             ),
             child: Badge(
               position: BadgePosition.topEnd(
-                top: -6,
-                end: -6,
+                top: -9,
+                end: -9,
               ),
               badgeStyle: const BadgeStyle(
-                padding: EdgeInsets.all(3),
+                padding: EdgeInsets.all(4),
               ),
-              child: const Icon(
-                Icons.notifications,
-                size: 18,
+              child: SvgPicture.asset(
+                ImageUtils.icNotification,
+                width: 18,
+                height: 18,
+                color: Colors.grey.shade800,
               ),
             ),
           ),

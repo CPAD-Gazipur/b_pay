@@ -4,6 +4,8 @@ class ImageUtils {
   static String appLogo = '${_baseUrl}b_pay_logo.svg';
   static String scannerBG = '${_baseUrl}scanner.svg';
   static String appBanner = '${_baseUrl}banner.png';
+  static String icCoinSVG = '${_baseUrl}coins.svg';
+  static String icNotification = '${_baseUrl}notification.svg';
 
   /// BOTTOM NAV ICON
   static String icHome = '${_baseUrl}home.png';

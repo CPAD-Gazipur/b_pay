@@ -1,4 +1,6 @@
+import 'package:b_pay/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BalanceWidget extends StatelessWidget {
@@ -33,12 +35,13 @@ class BalanceWidget extends StatelessWidget {
         const SizedBox(height: 5),
         Row(
           children: [
-            FaIcon(
-              FontAwesomeIcons.database,
+            SvgPicture.asset(
+              ImageUtils.icCoinSVG,
+              height: 18,
+              width: 18,
               color: balance > 0
                   ? Theme.of(context).primaryColor
                   : const Color(0xFFDF2528),
-              size: 18,
             ),
             const SizedBox(width: 5),
             Text(

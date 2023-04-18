@@ -1,7 +1,7 @@
 import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/widgets/exit_widget.dart';
+import 'package:b_pay/utils/image_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 class HomeNavScreen extends StatelessWidget {
@@ -43,24 +43,68 @@ class HomeNavScreen extends StatelessWidget {
                       type: BottomNavigationBarType.fixed,
                       selectedFontSize: 12,
                       unselectedFontSize: 12,
-                      items: const [
+                      items: [
                         BottomNavigationBarItem(
-                          icon: FaIcon(FontAwesomeIcons.house),
+                          icon: Image.asset(
+                            ImageUtils.icHome,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          activeIcon: Image.asset(
+                            ImageUtils.icHomeActive,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
                           label: 'Home',
                           tooltip: 'Home',
                         ),
                         BottomNavigationBarItem(
-                          icon: FaIcon(FontAwesomeIcons.chartPie),
+                          icon: Image.asset(
+                            ImageUtils.icUsage,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          activeIcon: Image.asset(
+                            ImageUtils.icUsageActive,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
                           label: 'Usage',
                           tooltip: 'Usage',
                         ),
                         BottomNavigationBarItem(
-                          icon: FaIcon(FontAwesomeIcons.fileInvoice),
+                          icon: Image.asset(
+                            ImageUtils.icHistory,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          activeIcon: Image.asset(
+                            ImageUtils.icHistoryActive,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
                           label: 'History',
                           tooltip: 'History',
                         ),
                         BottomNavigationBarItem(
-                          icon: FaIcon(FontAwesomeIcons.solidUser),
+                          icon: Image.asset(
+                            ImageUtils.icProfile,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          activeIcon: Image.asset(
+                            ImageUtils.icProfileActive,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fitHeight,
+                          ),
                           label: 'Profile',
                           tooltip: 'Profile',
                         ),

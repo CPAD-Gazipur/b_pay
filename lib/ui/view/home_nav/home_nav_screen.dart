@@ -2,6 +2,7 @@ import 'package:b_pay/providers/providers.dart';
 import 'package:b_pay/ui/widgets/exit_widget.dart';
 import 'package:b_pay/utils/image_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class HomeNavScreen extends StatelessWidget {
@@ -45,13 +46,13 @@ class HomeNavScreen extends StatelessWidget {
                       unselectedFontSize: 12,
                       items: [
                         BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageUtils.icHome,
                             height: 20,
                             width: 20,
                             fit: BoxFit.fitHeight,
                           ),
-                          activeIcon: Image.asset(
+                          activeIcon: SvgPicture.asset(
                             ImageUtils.icHomeActive,
                             height: 20,
                             width: 20,
@@ -61,13 +62,13 @@ class HomeNavScreen extends StatelessWidget {
                           tooltip: 'Home',
                         ),
                         BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageUtils.icUsage,
                             height: 20,
                             width: 20,
                             fit: BoxFit.fitHeight,
                           ),
-                          activeIcon: Image.asset(
+                          activeIcon: SvgPicture.asset(
                             ImageUtils.icUsageActive,
                             height: 20,
                             width: 20,
@@ -77,13 +78,13 @@ class HomeNavScreen extends StatelessWidget {
                           tooltip: 'Usage',
                         ),
                         BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageUtils.icHistory,
                             height: 20,
                             width: 20,
                             fit: BoxFit.fitHeight,
                           ),
-                          activeIcon: Image.asset(
+                          activeIcon: SvgPicture.asset(
                             ImageUtils.icHistoryActive,
                             height: 20,
                             width: 20,
@@ -93,13 +94,13 @@ class HomeNavScreen extends StatelessWidget {
                           tooltip: 'History',
                         ),
                         BottomNavigationBarItem(
-                          icon: Image.asset(
+                          icon: SvgPicture.asset(
                             ImageUtils.icProfile,
                             height: 20,
                             width: 20,
                             fit: BoxFit.fitHeight,
                           ),
-                          activeIcon: Image.asset(
+                          activeIcon: SvgPicture.asset(
                             ImageUtils.icProfileActive,
                             height: 20,
                             width: 20,

@@ -8,12 +8,12 @@ class ImageUtils {
   static String icNotification = '${_baseUrl}notification.svg';
 
   /// BOTTOM NAV ICON
-  static String icHome = '${_baseUrl}home.png';
-  static String icHomeActive = '${_baseUrl}home_active.png';
-  static String icUsage = '${_baseUrl}usage.png';
-  static String icUsageActive = '${_baseUrl}usage_active.png';
-  static String icHistory = '${_baseUrl}history.png';
-  static String icHistoryActive = '${_baseUrl}history_active.png';
-  static String icProfile = '${_baseUrl}profile.png';
-  static String icProfileActive = '${_baseUrl}profile_active.png';
+  static String icHome = '${_baseUrl}home.svg';
+  static String icHomeActive = '${_baseUrl}home_active.svg';
+  static String icUsage = '${_baseUrl}usage.svg';
+  static String icUsageActive = '${_baseUrl}usage_active.svg';
+  static String icHistory = '${_baseUrl}history.svg';
+  static String icHistoryActive = '${_baseUrl}history_active.svg';
+  static String icProfile = '${_baseUrl}profile.svg';
+  static String icProfileActive = '${_baseUrl}profile_active.svg';
 }

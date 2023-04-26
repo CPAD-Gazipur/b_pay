@@ -1,6 +1,6 @@
 # b_pay
 
-Bangladesh digital prepaid meter app ui design using Flutter
+Bangladesh Digital Prepaid Meter App UI  Re-design Using Flutter | bPay App UI | BPDB | Bangladesh Power Development Board (BPDB) | Bangladesh Digital Prepaid Meter App UI | DESCO | DESCO's Prepaid Meter Re-design | Dart | Flutter |
 
 [<img src="screenshots/b_pay_banner.jpeg">](https://www.behance.net/gallery/167787463/Prepaid-Meter-App-Design-UX-Case-study)
 
@@ -39,9 +39,9 @@ This course is designed for beginner to intermediate developers who want to buil
 - Code using Flutter with ❤️ by [Md. Al-Amin](https://github.com/alamin-karno)
 
 ## Animation (GIF):
-| Parcel Tracker App (GIF)  |
-|:-------------------------:|
-| <img src="#" width="250"> |
+|                Parcel Tracker App (GIF)                 |
+|:-------------------------------------------------------:|
+| <img src="screenshots/b_pay_animation.gif" width="250"> |
 
 ## Screenshots:
 

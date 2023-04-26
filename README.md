@@ -14,7 +14,7 @@ This course is designed for beginner to intermediate developers who want to buil
 
 **Support Me**
 
-- Buy this project on Gumroad [here](https://www.buymeacoffee.com/alaminkarno)
+- Buy this project on Gumroad [here](https://alaminkarno.gumroad.com/l/b-pay-ui)
 - Support me via buy me a coffee. [here](https://www.buymeacoffee.com/alaminkarno)
 
 **⚠️ Instruction**

@@ -12,33 +12,36 @@ class HomeNavScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () => showExitPopup(context),
-      child: Scaffold(
-        body: Stack(
-          children: [
-            SafeArea(
-              child: Consumer<HomeProvider>(
-                builder: (context, state, child) {
-                  return state.widgets[state.getCurrentIndex];
-                },
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                clipBehavior: Clip.antiAlias,
-                height: 58,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                  ),
+    return Consumer<HomeProvider>(
+      builder: (context, state, child) {
+        return WillPopScope(
+          onWillPop: () {
+            if (state.getCurrentIndex != 0) {
+              state.onTap(0);
+              return Future(() => false);
+            } else {
+              return showExitPopup(context);
+            }
+          },
+          child: Scaffold(
+            body: Stack(
+              children: [
+                SafeArea(
+                  child: state.widgets[state.getCurrentIndex],
                 ),
-                child: Consumer<HomeProvider>(
-                  builder: (context, state, child) {
-                    return BottomNavigationBar(
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    height: 58,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
+                    ),
+                    child: BottomNavigationBar(
                       currentIndex: state.getCurrentIndex,
                       onTap: state.onTap,
                       type: BottomNavigationBarType.fixed,
@@ -110,14 +113,14 @@ class HomeNavScreen extends StatelessWidget {
                           tooltip: 'Profile',
                         ),
                       ],
-                    );
-                  },
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

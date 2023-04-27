@@ -6,11 +6,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class BalanceWidget extends StatelessWidget {
   final String title;
   final double balance;
+  final Function()? onCancelTap;
 
   const BalanceWidget({
     Key? key,
     required this.title,
     required this.balance,
+    this.onCancelTap,
   }) : super(key: key);
 
   @override
@@ -25,10 +27,16 @@ class BalanceWidget extends StatelessWidget {
               title,
               style: Theme.of(context).textTheme.headline6,
             ),
-            FaIcon(
-              FontAwesomeIcons.xmark,
-              size: 16,
-              color: Colors.grey.shade600,
+            InkWell(
+              onTap: onCancelTap ??
+                  () {
+                    Navigator.of(context).pop();
+                  },
+              child: FaIcon(
+                FontAwesomeIcons.xmark,
+                size: 16,
+                color: Colors.grey.shade600,
+              ),
             )
           ],
         ),

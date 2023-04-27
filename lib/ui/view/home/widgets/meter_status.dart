@@ -33,6 +33,7 @@ class MeterStatus extends StatelessWidget {
           BalanceWidget(
             title: 'Balance',
             balance: meter.balance,
+            onCancelTap: () {},
           ),
           const SizedBox(height: 10),
           AccountInfoWidget(
